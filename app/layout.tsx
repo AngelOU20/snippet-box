@@ -1,15 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter, Outfit, Poppins } from 'next/font/google';
+import { Inter, Outfit } from 'next/font/google';
 import './styles/globals.css';
 import { ClerkProvider } from '@clerk/nextjs';
 
 const inter = Inter({ subsets: ['latin'] });
-
-const poppins = Outfit({
-  subsets: ['latin'],
-  variable: '--font-poppins',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-});
 
 const outfit = Outfit({
   subsets: ['latin'],
