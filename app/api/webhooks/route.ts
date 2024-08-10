@@ -1,6 +1,7 @@
 import { Webhook } from 'svix';
 import { headers } from 'next/headers';
 import { WebhookEvent } from '@clerk/nextjs/server';
+
 import User from '@/models/UserSchema';
 import connect from '@/lib/connect';
 
@@ -54,12 +55,12 @@ export async function POST (req: Request) {
   const { id } = evt.data;
   const eventType = evt.type;
 
-  if (evt.type === 'user.created') {
+  if (eventType === 'user.created') {
     const { id, email_addresses } = evt.data;
 
     const newUser = {
-      clerkUser: id,
-      emailAdress: email_addresses,
+      clerkUserId: id,
+      emailAddress: email_addresses[0].email_address,
     };
 
     try {

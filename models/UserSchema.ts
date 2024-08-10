@@ -3,13 +3,10 @@ import mongoose, { Document, Schema } from "mongoose";
 const userSchema = new mongoose.Schema(
   {
     clerkUserId: {
-      type: String,
-      unique: true,
-      required: true,
+      type: String, unique: true, required: true,
     },
     emailAddress: {
-      type: String,
-      required: true,
+      type: String, required: true,
     }
   },
   {
