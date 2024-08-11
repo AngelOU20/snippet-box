@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/logo';
-import { auth } from '@clerk/nextjs';
+import { auth } from '@clerk/nextjs/server';
 
 export const NavbarMarketing = () => {
   const { userId } = auth();
