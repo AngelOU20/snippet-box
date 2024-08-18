@@ -7,16 +7,35 @@ import {
 } from './sidebar-routes.data';
 import { SidebarItem } from '../sidebar-item/sidebar-item';
 import Link from 'next/link';
+import { useGlobalContext } from '@/context/ContextApi';
 
 export const SidebarRoutes = () => {
+  const {
+    sidebarMenuObject: { sidebarMenu, setSidebarMenu },
+  } = useGlobalContext();
+
+  console.log(sidebarMenu);
+
+  function clickMenu(index: number) {
+    const updatedSidebarMenu = sidebarMenu.map((menu, i) => {
+      if (i === index) {
+        return { ...menu, isSelected: true };
+      } else {
+        return { ...menu, isSelected: false };
+      }
+    });
+
+    setSidebarMenu(updatedSidebarMenu);
+  }
+
   return (
     <div className="flex flex-col justify-between h-full">
       <div className="py-2">
         <div className="py-2 md:py-6">
           <p className="text-slate-500 font-semibold mb-4">Quick Links</p>
 
-          {dataQuickLinksSidebar.map((item) => (
-            <React.Fragment key={item.label}>
+          {sidebarMenu.map((item) => (
+            <React.Fragment key={item.name}>
               <SidebarItem item={item} />
             </React.Fragment>
           ))}
