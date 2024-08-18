@@ -2,16 +2,17 @@
 
 import { UserProfile } from './user-profile';
 import { SearchBar } from './search-bar';
+import { ModeToggle } from '../mode-toogle/mode-toogle';
 
 export const Navbar = () => {
   return (
-    <div className="w-full bg-slate-100 p-5">
-      <div className="rounded-lg flex justify-between items-center gap-4 bg-white p-3">
+    <div className="w-full bg-slate-100 dark:bg-background p-5">
+      <div className="rounded-lg flex justify-between items-center gap-4 bg-white dark:bg-[#1D293D] p-3">
         <UserProfile />
 
         <div className="md:w-3/5 flex justify-between items-center gap-10">
           <SearchBar className="hidden md:flex" />
-          <p>Toogle mode dark</p>
+          <ModeToggle />
         </div>
       </div>
 
