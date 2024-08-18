@@ -7,9 +7,11 @@ type Props = {
 
 const MarketingLayout: React.FC<Props> = ({ children }) => {
   return (
-    <div className={`h-full bg-slate-100`}>
+    <div className={`h-full bg-slate-100 dark:bg-background`}>
       <NavbarMarketing />
-      <main className="bg-slate-100 h-screen pt-40 pb-20">{children}</main>
+      <main className="bg-slate-100 dark:bg-background h-screen pt-40 pb-20">
+        {children}
+      </main>
       <FooterMarketing />
     </div>
   );

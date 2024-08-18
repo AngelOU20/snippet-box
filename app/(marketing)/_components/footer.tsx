@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 export const FooterMarketing = () => {
   return (
-    <div className="fixed bottom-0 w-full p-4 border-t bg-slate-100 text-neutral-500">
+    <div className="fixed bottom-0 w-full p-4 border-t bg-slate-100 dark:bg-background text-neutral-500 dark:text-neutral-100">
       <div className="md:max-w-screen-2xl mx-auto flex items-center w-full justify-between">
         <p className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2024{' '}

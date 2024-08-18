@@ -5,7 +5,7 @@ export default function MarketingPage() {
         Organize Your Code Snippets{' '}
         <span className="text-cyan-600">Efficiently!</span>
       </h1>
-      <p className="text-center text-base md:text-lg w-[550px] max-sm:w-full text-slate-500">
+      <p className="text-center text-base md:text-lg w-[550px] max-sm:w-full text-slate-500 dark:text-white">
         With our advanced tagging and search features, you can quickly find the
         snippet you need, right when you need it. Spend less time searching for
         code and more time writing it.
