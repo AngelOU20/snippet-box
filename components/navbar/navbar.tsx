@@ -2,7 +2,10 @@
 
 import { UserProfile } from './user-profile';
 import { SearchBar } from './search-bar';
-import { ModeToggle } from '../mode-toogle/mode-toogle';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { ModeToggle } from '@/components/mode-toogle/mode-toogle';
+import { SidebarRoutes } from '@/components/sidebar-routes';
+import { Menu } from 'lucide-react';
 
 export const Navbar = () => {
   return (
@@ -13,6 +16,17 @@ export const Navbar = () => {
         <div className="md:w-3/5 flex justify-between items-center gap-10">
           <SearchBar className="hidden md:flex" />
           <ModeToggle />
+        </div>
+
+        <div className="block md:hidden">
+          <Sheet>
+            <SheetTrigger className="flex items-center">
+              <Menu />
+            </SheetTrigger>
+            <SheetContent side={'left'}>
+              <SidebarRoutes />
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
 
