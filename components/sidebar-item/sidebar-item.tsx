@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import { SidebarItemProps } from './sidebar-item.type';
 
 export const SidebarItem: React.FC<SidebarItemProps> = ({ item }) => {
-  const { label, icon: Icon, href } = item;
+  const { name, icon: Icon, href } = item;
   const pathName = usePathname();
 
   const activePath = pathName === href;
@@ -21,7 +21,7 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({ item }) => {
       )}
     >
       <Icon strokeWidth={1} className="h-5 w-5" />
-      {label}
+      {name}
     </Link>
   );
 };

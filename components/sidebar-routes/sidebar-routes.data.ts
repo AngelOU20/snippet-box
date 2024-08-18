@@ -11,19 +11,25 @@ import { AiOutlineJavaScript, AiOutlinePython } from "react-icons/ai";
 
 export const dataQuickLinksSidebar = [
   {
+    id: 1,
     icon: PanelsTopLeft,
-    label: "All Snippets",
+    name: "All Snippets",
     href: "/my-notes",
+    isSelected: true,
   },
   {
+    id: 2,
     icon: Heart,
-    label: "Favorites",
+    name: "Favorites",
     href: "/favorites",
+    isSelected: false,
   },
   {
+    id: 3,
     icon: Trash,
-    label: "Trash",
+    name: "Trash",
     href: "/Trash",
+    isSelected: false,
   },
 ];
 

@@ -3,7 +3,7 @@ import { IconType } from "react-icons";
 
 export type SidebarItemProps = {
   item: {
-    label: string;
+    name: string;
     icon: LucideIcon | IconType;
     href: string;
     count?: number;
