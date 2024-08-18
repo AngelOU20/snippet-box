@@ -17,7 +17,7 @@ const AddSnippetButton = () => {
 export const SearchBar = ({ className }: { className?: string }) => {
   return (
     <div
-      className={`relative pl-3 w-4/5 h-10 bg-slate-100 dark:bg-background rounded-md flex items-center gap-2 ${className}`}
+      className={`relative pl-3 w-full md:w-4/5 h-10 bg-slate-100 dark:bg-background rounded-md flex items-center gap-2 ${className}`}
     >
       <Search />
       <Input

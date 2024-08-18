@@ -16,7 +16,7 @@ export const Navbar = () => {
         </div>
       </div>
 
-      <div className="md:hidden flex justify-center items-center bg-white h-14 my-4 p-2 rounded-lg">
+      <div className="md:hidden w-full flex items-center bg-white h-14 my-4 p-2 rounded-lg dark:bg-[#1D293D]">
         <SearchBar />
       </div>
     </div>
